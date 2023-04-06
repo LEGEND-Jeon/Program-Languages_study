@@ -1,0 +1,86 @@
+<?php
+
+$one=$_POST['one'];
+$two=$_POST['two'];
+$three=$_POST['three'];
+$sum=$_POST['sum'];
+$save=$_POST['save'];
+$load=$_POST['load'];
+if(empty($sum)){
+	$sum=0;
+}
+
+else if(isset($save)){
+        setcookie("myCookie",$sum,time()+(60*60*24));
+}
+else if(isset($load)){
+set_time_limit(36000);
+echo "<center>".$_COOKIE['myCookie']."불러왔습니다.";
+$sum=$_COOKIE['myCookie'];
+}
+else{
+if($one!=$sum+1){	
+	echo "<center><br>틀렸습니다.<br> lose";
+	continue;
+}
+if(empty($two)){
+        ;}
+else{
+if($two!=$sum+2){
+	echo "<center>틀렸습니다.<br> lose";
+	continue;
+}}
+if(empty($three)){
+        ;}
+else{
+if($three != $sum+3){
+	echo "<center>틀렸습니다.<br> lose";
+	continue;
+}}}
+if(empty($one)){
+	echo "<center>숫자를 입력해주세요";
+}
+else{
+	if(empty($two)){
+$sum=$sum+1;}
+	else{
+		if(empty($three)){
+			$sum=$sum+2;
+		}
+		else{
+			$sum=$sum+3;
+		}
+	}
+}
+echo "<center>".$sum,"까지 입력하셨습니다.";
+
+if($sum==31){
+	echo "<center><br>lose";}
+?>
+<html>
+<head>
+<style>
+body{
+background-image:url('https://i.pinimg.com/originals/86/27/f2/8627f2ad4ff5bdfe2a7e8462ec8c8b99.jpg');
+background-repeat:no-repeat;
+background-size: 1450px; }
+</style>
+</head>
+<body>
+<br>
+<br>
+<img width=500px src='https://o.remove.bg/downloads/40ba2a78-988c-4b3b-bad7-6b7a04abf55f/img-removebg-preview.png'/>
+<form method="POST" action="">
+<input type="text" name="one"/>
+<input type="text" name="two"/>
+<input type="text" name="three"/>
+<input type="hidden" name="sum" value="<?=$sum?>"/>
+<br>
+<input type="image" src="https://o.remove.bg/downloads/93fca50a-3c63-4f3a-bb3a-f64332881bca/br-pink-spoon-removebg-preview.png" name="sumit" width="50px"value="입력"/>
+<br>
+<input name="save" type="submit"value="save" class="button"/>
+<input name="load" type="submit" value="load" class="buttom"/>
+</form>
+</body>
+</html>
+

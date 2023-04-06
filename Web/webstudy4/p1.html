@@ -1,0 +1,44 @@
+<?php
+$id=$_POST['id'];
+$pw=$_POST['pw'];
+if ($id=="CAT-CERT"){
+        if($pw=="CAT-CERT"){
+                echo "Hello CAT-CERT";
+                setcookie("myCookie","cookieValue", time()+(60*60*24));
+
+        }
+}
+else if($id=="admin"){
+        alert("Your IP:".$_SERVER['REMOTE_ADDR']."<br>");}
+else{
+        echo "wrong password!"; }
+?>
+<html>
+<body>
+<center>
+<form method="POST" action="">
+<table border="1px" height="500px" width="500px">
+<tr>
+<td>
+CAT-LOGIN
+</td>
+</tr>
+<tr>
+<td>
+<input type="text" id="id" name="id">
+</td>
+</tr>
+<tr>
+<td>
+<input type="password" id="pw" name="pw">
+</td>
+</tr>
+<tr>
+<td height="50px">
+<input type="submit" value="입력">
+</td>
+</tr>
+</table>
+</form>
+</center></body></html>
+

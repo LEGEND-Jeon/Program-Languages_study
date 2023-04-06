@@ -1,0 +1,45 @@
+<?php
+
+$n=$_POST['gg'];
+$sum=$_POST['sum'];
+$k=$_POST['k'];
+echo "세 숫자를 입력하세요<br>";
+$l=0;
+$f=0;
+$b=0;
+$c=0;
+if($_POST['k']==0){
+        $a=rand()%899+100;
+        echo $a."<br>"; //테스트를 위해 만들었습니다.
+        $sum=$a;
+        $k=1;}
+else{
+echo "횟수:".$k,"<br>";
+$k++;
+for ($i=0; $i<3;$i++){
+        for ($j=0; $j<3; $j++){
+                if (substr($n,$i,1) == substr($sum,$j,1)){
+if ($i==$j){
+                                $l++;
+
+                        }
+                        else{
+                                $f++;
+                        }
+                }}
+}
+$b=3-$l-$f;
+echo $l."strike".$f."ball".$b."out <br>";
+
+if($l < 3){
+        $c++;}
+else{
+        echo "correct!";}
+if($k>10){
+        echo "fail";
+}
+}
+?>
+
+<html>
+

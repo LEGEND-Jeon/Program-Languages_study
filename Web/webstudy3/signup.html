@@ -1,0 +1,54 @@
+<html>
+        <head>
+<center>                <title>Naver</title>
+                <h1>회원가입</h1>
+        </head>
+
+        <body>
+<img src="https://tse3.mm.bing.net/th?id=OIP.3haa-G0-pzE2wwehCgRuYwHaBX&pid=Api&P=0&w=651&h=120">
+                <br><form method="post" action=""><br><p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     아  이 디   <input type="text" name="id"/>
+        </p>
+
+       <p>&nbsp;&nbsp; &nbsp; &nbsp;            비밀번호<input type="password" name="pw"/><br>
+                        </p>
+                        <p>     &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비밀번호 재확인<input type="password" name="itext"/></td><br>
+                        </p>
+<p>
+이름<input type="text" name="name"/><br>
+</p>
+<p > &nbsp;&nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;   &nbsp; &nbsp;  &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp;             생년월일
+
+                        <input type="date" value="2000.01.01" name="year"; >    생년월일
+
+</p>
+<p >                    성별 <input type="radio" name="gb"value="남자"/>남
+                        <input type="radio" name="gb" value="여자"/>여<br>
+</p> <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        휴대전화 <select name="phone"><input type="text" name="phone"/>
+                        <p>&nbsp;&nbsp; &nbsp; &nbsp;   &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" name="itext" value='휴대전화 번호'/><input type="button" class="navyBtn" value='인증번호받기' border:" 0px solid;"/></td><br>
+                <input type="text" name="itext" value="인증번호를 입력하세요" />
+                        <br>
+                        </select></p>
+<p><input type="submit" value="가입하기" style="background-color:lightgreen; width: 300px; height: 100px; border: 0px solid;"/>
+        </p>
+                </table>
+                </form>
+                </center>
+        </body>
+</html>
+
+<?php
+$name=$_POST['name'];
+echo  $name,"의 ";
+$id=$_POST['id'];
+echo "  아이디는 ", $id;
+$pw=$_POST['pw'];
+echo "  비밀번호는 ", $pw;
+$yesr=$_POST['year'];
+echo "  생년월일은 ", $year;
+$gb=$_POST['gb'];
+echo "  성별은 ", $gb;
+$phone=$_POST['phone'];
+echo "  전화번호는 ", $phone;
+?>

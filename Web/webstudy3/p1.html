@@ -1,0 +1,19 @@
+
+<html>
+<body>
+<form method="post" action="">
+입력:<input type="text" name="gg"/>
+<input type="submit" value="전송"/>
+</form>
+</body>
+</html>
+
+<?php
+$n=(int)($_POST['gg']);
+$i=0;
+for ($i=0;$i<10;$i++){
+echo $n."x".$i."=".$i*$n."<br>";
+}
+
+?>
+

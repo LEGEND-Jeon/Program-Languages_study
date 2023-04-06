@@ -1,0 +1,23 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function c(){
+            var currentDate=new Date();
+            var cl=document.getElementById("cl");
+            var a=currentDate.getHours()+"h";
+            a+=currentDate.getMinutes() + "m";
+        a+=currentDate.getSeconds() + "s";
+
+            cl.innerText=a;
+            setInterval(c,1000);
+        }
+    </script>
+</head>
+<body onload="c()">
+    <div id='cl' class="clock" style="font-size:100" align="center"  >
+
+
+    </div>
+</body>
+</html>
+

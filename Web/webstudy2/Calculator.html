@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>계산기</title>
+</head>
+<body>
+	<p align="center">
+	<input type="number" name="N1" value=""/>
+	<input type="text" name="input" value=""/>
+	<input type="number" name="N2" value=""/>
+	<input type="button" onclick='jstest()'value='계산'/>
+
+<script>
+	jstest(){
+	var N1=document.getElementByname("N1").value;
+	var input= document.getElementByname("input").value;
+	var N2=document.getElementByname("N2").value;
+	
+		if (input=='+')
+			document.write(Number(N1)+Number(N2))
+		if (input=='-')
+			document.write(Number(N1)-Number(N2))
+		if (input=='/')
+			document.write(Number(N1)/Number(N2))
+		if (input=='*')
+			document.write(Number(N1)*Number(N2))
+		
+	}
+</script>
+</body>
+</html>
+

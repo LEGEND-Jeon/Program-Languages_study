@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>실습3</title>
+</head>
+<body>
+	
+	<input type="button" onclick='jstest()'value='클릭시 실행'/>
+	
+	
+</body>
+</html>
+<script>
+	function jstest(){
+		var i=0;
+		var z;
+		var str= prompt("몇단??");
+		document.write("<table style='border: 2px solid; border-color:blue;'>")
+		document.write("<tr>")
+		for (i=0; i<9;i++){
+		document.write("<td style='border: 1px dashed; border-color:red;'>")
+		document.write(str+'x'+i+'='+str*i)
+		document.write("</td>")}
+		document.write("</tr>")	
+		document.write("</table>")
+			
+	}
+		</script>
+
